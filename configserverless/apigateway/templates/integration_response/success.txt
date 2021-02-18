@@ -1,0 +1,3 @@
+#set ($inputRoot = $util.parseJson($input.path('$'))){
+  "data" : $inputRoot.data
+}

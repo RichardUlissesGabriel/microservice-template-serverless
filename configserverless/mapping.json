@@ -1,0 +1,27 @@
+{
+    "template": {
+        "compiled": "cloudformation-template-update-stack.json",
+        "core": "cloudformation-template-create-stack.json"
+    },
+    "stack": "$apiNameMapping-$moduloNameMapping-$stackNameMapping",
+    "role": {
+        "Fn::Join": [
+            "-", [
+                "$service",
+                "$region",
+                "lambdaRole"
+            ]
+        ]
+    },
+    "policy": {
+        "Fn::Join": [
+            "-", [
+                "$service",
+                "lambda"
+            ]
+        ]
+    },
+    "apiGateway": "$apiNameMapping",
+    "lambda": "$apiNameMapping-$moduloNameMapping-$lambda",
+    "logGroup": "/aws/lambda/$apiNameMapping-$moduloNameMapping-$lambda"
+}

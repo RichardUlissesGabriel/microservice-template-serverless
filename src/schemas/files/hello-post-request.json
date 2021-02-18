@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "table.required": {
+        "nr_cod.required": "string",
+        "ds_emite_nota": "string",
+        "ds_cotacao": "string",
+        "id_pedido": "string",
+        "ds_parceiro.required": "string"
+      }
+    }
+  ]
+}

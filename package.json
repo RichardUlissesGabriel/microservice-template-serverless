@@ -1,0 +1,33 @@
+{
+  "name": "micro-service-template",
+  "version": "1.0.0",
+  "description": "Template para a criação de um micro serviço",
+  "main": "handlers/handler.js",
+  "scripts": {
+    "invoke-local": "./scripts/invoke-local.sh",
+    "deploy:dev": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=dev -v",
+    "deploy:teste": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=test -v",
+    "deploy:homolog": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=homolog -v",
+    "deploy:prod": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=prod -v",
+    "deploy:master": "npm run deploy:prod",
+    "deploy": "npm run deploy:dev",
+    "generate-schemas": "node src/schemas/generate.js"
+  },
+  "author": "Richard Ulisses Gabriel",
+  "license": "MIT",
+  "devDependencies": {
+    "@richard_gabriel/engine-serverless": "^1.0.3",
+    "@richard_gabriel/serverless-aws-documentation": "^1.0.0",
+    "js-yaml": "^3.14.0",
+    "schemas": "file:./src/schemas",
+    "serverless": "1.61.0",
+    "serverless-aws-alias": "^1.0.0",
+    "serverless-aws-resource-names": "^0.1.1",
+    "serverless-latest-layer-version": "^2.1.0",
+    "serverless-plugin-log-retention": "^2.0.0",
+    "serverless-pseudo-parameters": "^2.5.0"
+  },
+  "dependencies": {
+    "joi": "^17.3.0"
+  }
+}

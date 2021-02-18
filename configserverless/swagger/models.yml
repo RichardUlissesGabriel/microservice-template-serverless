@@ -1,0 +1,46 @@
+models:
+  -
+    name: HelloPost
+    description: "This is an address"
+    contentType: "application/json"
+    schema:
+      type: object
+      properties:
+        codigo:
+          type: string
+        titular:
+          type: string
+        data:
+          type: string
+          format: date
+        valor:
+          type: number
+          format: double
+  -
+    name: MessageResponse
+    contentType: "application/json"
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+  -
+    name: 400JsonResponse
+    contentType: "application/json"
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+        statusCode:
+          type: number
+
+commonModelSchemaFragments:
+  MethodResponse400Json:
+    statusCode: '400'
+    responseModels:
+      "application/json": 400JsonResponse
+  MethodResponse200:
+    statusCode: '200'
+    responseModels:
+      "application/json": MessageResponse

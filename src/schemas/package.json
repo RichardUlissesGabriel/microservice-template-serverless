@@ -1,0 +1,7 @@
+{
+  "name": "schemas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Richard Ulisses Gabriel",
+  "license": "ISC"
+}

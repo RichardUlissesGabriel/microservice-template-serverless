@@ -1,0 +1,12 @@
+{
+  "status": "boolean",
+  "code": "number",
+  "type": "string",
+  "message": "string",
+  "errors": [
+    {
+      "message": "string",
+      "error": "string"
+    }
+  ]
+}

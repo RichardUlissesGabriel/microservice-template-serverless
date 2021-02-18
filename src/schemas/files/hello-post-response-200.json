@@ -1,0 +1,14 @@
+{
+  "status": "boolean",
+  "code": "number",
+  "type": "string",
+  "message": "string",
+  "data": [
+    {
+      "ds_origem": "string",
+      "id_cotacao": "number",
+      "id_pedido": "number",
+      "finalize": "boolean"
+    }
+  ]
+}

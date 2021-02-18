@@ -1,0 +1,24 @@
+integrationResponse:
+    template: ${file(./configserverless/apigateway/templates/integration_response/success.txt)}
+    statusCodes:
+      201:
+        pattern: '.*.201.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/success.txt)}      
+      202:
+        pattern: '.*.202.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/success.txt)}
+      204:
+        pattern: '.*.204.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/success.txt)}
+      400:
+        pattern: '.*.400.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/error.txt)}
+      401:
+        pattern: '.*.401.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/error.txt)}
+      422:
+        pattern: '.*.422.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/error.txt)}
+      500:
+        pattern: '.*.500.*'
+        template: ${file(./configserverless/apigateway/templates/integration_response/error.txt)}
